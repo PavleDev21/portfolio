@@ -1,0 +1,62 @@
+/**
+iconfont Webfont
+*/
+@font-face {
+	font-family: 'iconfont';
+	src: url('../fonts/iconfont.eot?1609821329698');
+	src: url('../fonts/iconfont.eot?#iefix-1609821329698') format('embedded-opentype'),
+		url('../fonts/iconfont.woff2?1609821329698') format('woff2'),
+		url('../fonts/iconfont.woff?1609821329698') format('woff'),
+		url('../fonts/iconfont.ttf?1609821329698') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+	font-family: 'iconfont';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+Glyphs list
+*/
+
+.icon-apple::before {
+	content: '\ea01';
+}
+
+.icon-dumbell::before {
+	content: '\ea02';
+}
+
+.icon-email::before {
+	content: '\ea03';
+}
+
+.icon-healthcare::before {
+	content: '\ea04';
+}
+
+.icon-instagram::before {
+	content: '\ea05';
+}
+
+.icon-iphone::before {
+	content: '\ea06';
+}
+
+.icon-photo::before {
+	content: '\ea07';
+}
