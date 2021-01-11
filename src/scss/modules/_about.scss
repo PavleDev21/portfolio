@@ -1,0 +1,27 @@
+.about {
+    position: relative;
+}
+.about-card {
+    height: 100vh;
+    background-color: $carnation;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+.about-card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-size: 65px;
+    line-height: 70px;
+    font-weight: 700;
+}
+.about-fixed {
+    position: fixed;
+}
+.about-content {
+    min-height: 2000px;
+}
