@@ -4,7 +4,7 @@
 .about-card {
     height: 100vh;
     background-color: $carnation;
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
     width: 50%;
@@ -21,6 +21,10 @@
 }
 .about-fixed {
     position: fixed;
+}
+.about-bottom {
+    top: 100%;
+    transform: translateY(-100%);
 }
 .about-content {
     min-height: 2000px;
