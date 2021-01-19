@@ -27,5 +27,40 @@
     transform: translateY(-100%);
 }
 .about-content {
+    padding-left: 50%;
     min-height: 2000px;
+}
+.about-skills {
+    padding-top: 100px;
+    //padding: 20px 0;
+}
+.as-item {
+    padding: 0 15px;
+    text-align: center;
+    display: inline-block;
+}
+.as-icon {
+    height: 55px;
+    margin-bottom: 5px;
+    animation: 1.5s icon-float;
+    animation-iteration-count: infinite;
+}
+.as-title {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+@keyframes icon-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

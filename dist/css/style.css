@@ -158,6 +158,11 @@ Glyphs list
   padding: 0 20px;
   margin: 0 auto; }
 
+.work-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
 .body {
   position: relative;
   font-family: "Poppins"; }
@@ -346,4 +351,121 @@ Glyphs list
   transform: translateY(-100%); }
 
 .about-content {
+  padding-left: 50%;
   min-height: 2000px; }
+
+.about-skills {
+  padding-top: 100px; }
+
+.as-item {
+  padding: 0 15px;
+  text-align: center;
+  display: inline-block; }
+
+.as-icon {
+  height: 55px;
+  margin-bottom: 5px;
+  animation: 1.5s icon-float;
+  animation-iteration-count: infinite; }
+
+.as-title {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  display: block; }
+
+@keyframes icon-float {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-3px); }
+  100% {
+    transform: translateY(0); } }
+
+.work {
+  position: relative; }
+
+.work-card {
+  height: 100vh;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; }
+
+.work-card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 65px;
+  line-height: 70px;
+  font-weight: 700; }
+
+.work-fixed {
+  position: fixed; }
+
+.work-bottom {
+  top: 100%;
+  transform: translateY(-100%); }
+
+.work-content {
+  padding-left: 50%;
+  min-height: 2000px; }
+
+.work-item {
+  position: relative;
+  height: 100vh; }
+
+.work-main-btn {
+  visibility: visible;
+  opacity: 1;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px 23px;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(51, 51, 51, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.3s; }
+  .work-main-btn:hover {
+    background-color: #333333;
+    transition: 0.3s; }
+  .work-main-btn:focus {
+    outline: none; }
+
+.main-btn-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s; }
+
+.work-close-btn {
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  height: 45px;
+  width: 45px;
+  background-color: #F7484E;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  transition: 0.5s; }
+  .work-close-btn:focus {
+    outline: none; }
+
+.close-btn-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s; }
+
+.work-item-content {
+  display: none; }
