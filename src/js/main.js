@@ -6,6 +6,43 @@ $navBtn.on('click', function() {
 })
 
 $('.banner-subtitle').delay(1500).animate({opacity: 1}, {duration: 700});
+
+
+function floatingNav() {
+    var $navItemMain = $('.navr-link');
+    var $navItemAbout = $('.about-navr-link');
+    var $navItemWork = $('.work-navr-link');
+    var $jsSection = $('.js-section');
+
+    $navItemMain.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $navItemAbout.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $navItemWork.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $jsSection.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $navItemMain.on('click', function() {
+        var index = $(this).data('index');
+        var sectionOffset = $('.js-section[data-index="'+ index + '"]').offset().top;
+        $('html,body').stop().animate({scrollTop: sectionOffset}, 900);
+    })
+
+}
+
+
 function scrollAbout() {
     var $aboutSticky = $('.about-card');
     var sectionOffsetTop = $('.about').offset().top;
@@ -27,10 +64,17 @@ function scrollAbout() {
     });
 }
 
+var offsetBtm;
+$(document).scroll(function() {
+    offsetBtm = $('.work').offset().top + $('.work').height() - $('.work-card').height();
+})
+
 function scrollWork() {
     var $workSticky = $('.work-card');
     var sectionOffsetTop = $('.work').offset().top;
-    var triggerOffset = sectionOffsetTop + $('.work').height() - $workSticky.height();
+    //var triggerOffset = sectionOffsetTop + $('.work').height() - $workSticky.height();
+    //doesn't work when element changes height constant bottom offset calculation needed
+    //don't know fix when last item content is less than 100vh!!!
 
     $(document).scroll(function() {
         if ( $(document).scrollTop() >= sectionOffsetTop ) {
@@ -39,10 +83,10 @@ function scrollWork() {
             $workSticky.removeClass('work-fixed');
         }
 
-        if ( $(document).scrollTop() > triggerOffset ) {
+        if ( $(document).scrollTop() > offsetBtm ) {
             $workSticky.removeClass('work-fixed');
             $workSticky.addClass('work-bottom');
-        } else if( $(document).scrollTop() <= triggerOffset ) {
+        } else if( $(document).scrollTop() <= offsetBtm ) {
             $workSticky.removeClass('work-bottom');
         }
     });
@@ -104,7 +148,6 @@ function workItem() {
         $('.work-close-btn[data-index="'+ index + '"]').addClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').addClass('main-btn-hidden');
         counter++;
-        console.log(counter);
     })
 
     $closeBtn.on('click', function() {
@@ -126,10 +169,10 @@ function workItem() {
         $('.work-close-btn[data-index="'+ index + '"]').removeClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').removeClass('main-btn-hidden');
         counter--;
-        console.log(counter);
     })
 }
 
+floatingNav();
 scrollAbout();
 scrollWork();
 workItem();

@@ -168,11 +168,11 @@ Glyphs list
   font-family: "Poppins"; }
 
 .header {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  display: block;
   background-color: transparent;
   z-index: 10; }
 
@@ -180,10 +180,10 @@ Glyphs list
   width: 40px;
   height: 37px;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
   border: none;
   position: relative;
-  float: right;
+  float: left;
   z-index: 15;
   background-color: transparent;
   cursor: pointer; }
@@ -258,6 +258,69 @@ Glyphs list
   .nav-show {
     right: 0; } }
 
+.nav-rep {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.navr-list {
+  padding-bottom: 9px; }
+
+.navr-item {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px; }
+  .navr-item::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%) skew(-17deg, 0deg);
+    height: 75%;
+    width: 2px;
+    background-color: #F7484E; }
+  .navr-item:nth-child(4)::after {
+    display: none; }
+
+.navr-link {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #F7484E;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .navr-link::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: 0.3s; }
+  .navr-link:hover::after {
+    opacity: 1;
+    transition: 0.3s; }
+
+.navr-color-change .navr-item::after {
+  background-color: #000000; }
+
+.navr-color-change .navr-link {
+  color: #000000; }
+
+.navr-after-color .navr-link::after {
+  background-color: #F7484E; }
+
+#aa {
+  font-size: 200px; }
+
 .banner {
   background-color: #333333;
   text-align: center;
@@ -293,6 +356,7 @@ Glyphs list
   text-align: center; }
 
 .banner-arrow {
+  display: none;
   font-size: 28px;
   color: #FFFFFF;
   position: absolute;
@@ -413,34 +477,53 @@ Glyphs list
 
 .work-content {
   padding-left: 50%;
-  min-height: 2000px; }
+  overflow: hidden; }
 
 .work-item {
   position: relative;
   height: 100vh; }
 
 .work-main-btn {
+  padding: 0;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
   visibility: visible;
   opacity: 1;
-  font-size: 13px;
-  line-height: 15px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 10px 23px;
-  border: 1px solid #FFFFFF;
-  background-color: rgba(51, 51, 51, 0.7);
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   transition: 0.3s; }
-  .work-main-btn:hover {
-    background-color: #333333;
+  .work-main-btn:hover .work-main-icon {
+    color: #333333;
     transition: 0.3s; }
   .work-main-btn:focus {
     outline: none; }
+
+.work-main-icon {
+  position: absolute;
+  top: -35px;
+  left: -3px;
+  font-size: 95px;
+  color: rgba(51, 51, 51, 0.8);
+  background-color: transparent;
+  transition: 0.3s; }
+
+.work-main-btn-text {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .main-btn-hidden {
   visibility: hidden;
@@ -448,12 +531,14 @@ Glyphs list
   transition: 0.3s; }
 
 .work-close-btn {
+  padding: 0;
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   border: none;
-  height: 45px;
-  width: 45px;
-  background-color: #F7484E;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -461,6 +546,33 @@ Glyphs list
   transition: 0.5s; }
   .work-close-btn:focus {
     outline: none; }
+
+.work-close-icon {
+  position: absolute;
+  top: -24px;
+  left: -2px;
+  font-size: 68px;
+  color: #F7484E;
+  background-color: transparent;
+  transition: 0.3s; }
+
+.work-close-btn-span {
+  position: absolute;
+  top: 24px;
+  left: 9px;
+  height: 3px;
+  width: 30px;
+  background-color: #FFFFFF;
+  transform: rotate(45deg); }
+  .work-close-btn-span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #FFFFFF;
+    transform: rotate(90deg); }
 
 .close-btn-visible {
   visibility: visible;

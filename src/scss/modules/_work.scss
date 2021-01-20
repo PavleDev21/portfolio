@@ -28,7 +28,8 @@
 }
 .work-content {
     padding-left: 50%;
-    min-height: 2000px;
+    overflow: hidden;
+    //min-height: 2000px;
 }
 .work-item {
     @extend %bc-img;
@@ -36,16 +37,14 @@
     height: 100vh;
 }
 .work-main-btn {
+    padding: 0;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
     visibility: visible;
     opacity: 1;
-    font-size: 13px;
-    line-height: 15px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: $white;
-    padding: 10px 23px;
-    border: 1px solid $white;
-    background-color: rgba($mine-shaft, 0.7);
+    border: none;
+    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -53,12 +52,35 @@
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-        background-color: rgba($mine-shaft, 1);
-        transition: 0.3s;
+        .work-main-icon {
+            color: rgba($mine-shaft, 1);
+            transition: 0.3s;
+        }
     }
     &:focus {
         outline: none;
     }
+}
+.work-main-icon {
+    position: absolute;
+    top: -35px;
+    left: -3px;
+    font-size: 95px;
+    color: rgba($mine-shaft, 0.8);
+    background-color: transparent;
+    transition: 0.3s;
+}
+.work-main-btn-text {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .main-btn-hidden {
     visibility: hidden;
@@ -66,12 +88,14 @@
     transition: 0.3s;
 }
 .work-close-btn {
+    padding: 0;
+    overflow: hidden;
     visibility: hidden;
     opacity: 0;
     border: none;
-    height: 45px;
-    width: 45px;
-    background-color: $carnation;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
     position: absolute;
     top: 25px;
     right: 25px;
@@ -79,6 +103,34 @@
     transition: 0.5s;
     &:focus {
         outline: none;
+    }
+}
+.work-close-icon {
+    position: absolute;
+    top: -24px;
+    left: -2px;
+    font-size: 68px;
+    color: $carnation;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.work-close-btn-span {
+    position: absolute;
+    top: 24px;
+    left: 9px;
+    height: 3px;
+    width: 30px;
+    background-color: $white;
+    transform: rotate(45deg);
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 30px;
+        background-color: $white;
+        transform: rotate(90deg);
     }
 }
 .close-btn-visible {

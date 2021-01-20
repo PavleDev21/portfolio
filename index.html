@@ -11,7 +11,7 @@
         <div class="navigation">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">home</a>
+                    <a href="javascript:;" class="nav-link">home</a>
                 </li>
                 <li class="nav-item">
                     <a href="javascript:;" class="nav-link">about</a>
@@ -29,17 +29,49 @@
         </button>
     </header>
     <main class="main">
-        <div class="banner">
+        <div class="banner js-section">
                 <h1 class="banner-title">
                     <span class="banner-name">Pavle</span>
                     <span class="banner-surname">Baračkov</span>
                 </h1>
                 <span class="banner-subtitle">Front-End Developer</span>
                 <div class="icon-banner-arrow banner-arrow"></div>
+                <nav class="nav-rep">
+                    <ul class="navr-list">
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link">home</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link">about</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link">work</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
         </div>
-        <div class="about">
+        <div class="about js-section">
             <div class="about-card">
                 <h2 class="about-card-title">About</h2>
+                <nav class="nav-rep">
+                    <ul class="navr-list navr-color-change">
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link about-navr-link">home</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link about-navr-link">about</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link about-navr-link">work</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link about-navr-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="about-content">
                 <div class="about-skills">
@@ -58,28 +90,44 @@
                 </div>
             </div>
         </div>
-        <div class="work">
+        <div class="work js-section">
             <div class="work-card">
                 <h2 class="work-card-title">Work</h2>
+                <nav class="nav-rep">
+                    <ul class="navr-list navr-color-change navr-after-color">
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link work-navr-link">home</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link work-navr-link">about</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link work-navr-link">work</a>
+                        </li>
+                        <li class="navr-item">
+                            <a href="javascript:;" class="navr-link work-navr-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="work-content">
-                <div class="work-item" style="background-image: url(src/images/work1.png)">
-                    <button class="work-main-btn">More</button>
-                    <button class="work-close-btn">C</button>
+                <div class="work-item" style="background-image: url(src/images/header-austria-tourism.jpg)">
+                    <button class="work-main-btn"><span class="work-main-icon">&#x2B22;</span><span class="work-main-btn-text">More</span></button>
+                    <button class="work-close-btn"><span class="work-close-icon">&#x2B22;</span><span class="work-close-btn-span"></span></button>
                 </div>
                 <div class="work-item-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit quos at velit quis animi suscipit aliquam iure consequatur sunt voluptas ipsam aliquid blanditiis aspernatur facere ratione, alias, officia possimus!</p>
+                    <p id="aa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit quos at velit quis animi suscipit aliquam iure consequatur sunt voluptas ipsam aliquid blanditiis aspernatur facere ratione, alias, officia possimus!</p>
                 </div>
-                <div class="work-item" style="background-image: url(src/images/work2.png)">
-                    <button class="work-main-btn">Click me!</button>
-                    <button class="work-close-btn">C</button>
+                <div class="work-item" style="background-image: url(src/images/header-puma.jpg)">
+                    <button class="work-main-btn"><span class="work-main-icon">&#x2B22;</span><span class="work-main-btn-text">More</span></button>
+                    <button class="work-close-btn"><span class="work-close-icon">&#x2B22;</span><span class="work-close-btn-span"></span></button>
                 </div>
                 <div class="work-item-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit quos at velit quis animi suscipit aliquam iure consequatur sunt voluptas ipsam aliquid blanditiis aspernatur facere ratione, alias, officia possimus!</p>
+                    <p id="aa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit quos at velit quis animi suscipit aliquam iure consequatur sunt voluptas ipsam aliquid blanditiis aspernatur facere ratione, alias, officia possimus!</p>
                 </div>
             </div>
         </div>
-        <div class="rndm" style="height: 500px; background-color: blue;"></div>
+        <div style="background-color: red; height: 1000px;"></div>
     </main>
     <script src="src/js/jquery.js"></script>
     <script src="src/js/main.js"></script>

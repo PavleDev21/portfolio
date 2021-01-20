@@ -1,9 +1,10 @@
 .header {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    display: block;
+    //display: block;
     background-color: transparent;
     z-index: 10;
     @extend %clearfix;
@@ -12,10 +13,10 @@
     width: 40px;
     height: 37px;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-left: 20px;
     border: none;
     position: relative;
-    float: right;
+    float: left;
     z-index: 15;
     background-color: transparent;
     cursor: pointer;
