@@ -172,7 +172,68 @@ function workItem() {
     })
 }
 
+function workItemTouch() {
+    var $workBtn = $('.work-main-btn');
+    var $closeBtn = $('.work-close-btn');
+    var $workCard = $('.work-card');
+    var $workItemContent = $('.work-item-content');
+    var $workItem = $('.work-item');
+
+    $workBtn.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $closeBtn.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $workItem.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $workItemContent.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $workBtn.on('click', function() {
+        var index = $(this).data('index');
+        var sectionOffset = $('.work-item[data-index="'+ index + '"]').offset().top;
+        $('html,body').stop().animate({scrollTop: sectionOffset}, 500);
+        $('.work-item-content[data-index="'+ index + '"]').delay(1000).show(0);
+        $('.work-item[data-index="'+ index + '"]').delay(1100).animate({
+            height: '45vh'
+        }, 1000);
+        $('.work-close-btn[data-index="'+ index + '"]').addClass('close-btn-visible');
+        $('.work-main-btn[data-index="'+ index + '"]').addClass('main-btn-hidden');
+    })
+
+    $closeBtn.on('click', function() {
+        var index = $(this).data('index');
+        var sectionOffset = $('.work-item[data-index="'+ index + '"]').offset().top;
+        $('html,body').stop().animate({scrollTop: sectionOffset}, 500);
+        $('.work-item[data-index="'+ index + '"]').delay(1000).animate({
+            height: '100vh'
+        }, 1000);
+        $('.work-item-content[data-index="'+ index + '"]').delay(2100).hide(0);
+        $('.work-close-btn[data-index="'+ index + '"]').removeClass('close-btn-visible');
+        $('.work-main-btn[data-index="'+ index + '"]').removeClass('main-btn-hidden');
+    })
+}
+
 floatingNav();
-scrollAbout();
-scrollWork();
-workItem();
+
+if (screen.width > 1024) {
+    scrollAbout();
+    scrollWork();
+    workItem();
+}
+
+if (screen.width <= 1024) {
+    workItemTouch();
+}
+
+

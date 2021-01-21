@@ -64,3 +64,23 @@
         transform: translateY(0);
     }
 }
+
+@include breakpoint(tablet) {
+    .about-card {
+        position: relative;
+        width: 100%;
+    }
+    .about-content {
+        padding-left: 0;
+    }
+}
+
+@include breakpoint(phone) {
+    .about-card {
+        position: relative;
+        width: 100%;
+    }
+    .about-content {
+        padding-left: 0;
+    }
+}

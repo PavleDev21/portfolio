@@ -447,8 +447,23 @@ Glyphs list
   100% {
     transform: translateY(0); } }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-card {
+    position: relative;
+    width: 100%; }
+  .about-content {
+    padding-left: 0; } }
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .about-card {
+    position: relative;
+    width: 100%; }
+  .about-content {
+    padding-left: 0; } }
+
 .work {
-  position: relative; }
+  position: relative;
+  border-top: 1px solid #000; }
 
 .work-card {
   height: 100vh;
@@ -581,3 +596,17 @@ Glyphs list
 
 .work-item-content {
   display: none; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .work-card {
+    position: relative;
+    width: 100%; }
+  .work-content {
+    padding-left: 0; } }
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .work-card {
+    position: relative;
+    width: 100%; }
+  .work-content {
+    padding-left: 0; } }

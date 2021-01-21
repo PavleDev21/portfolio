@@ -1,5 +1,6 @@
 .work {
     position: relative;
+    border-top: 1px solid #000;
 }
 .work-card {
     height: 100vh;
@@ -140,4 +141,24 @@
 }
 .work-item-content {
     display: none;
+}
+
+@include breakpoint(tablet) {
+    .work-card {
+        position: relative;
+        width: 100%;
+    }
+    .work-content {
+        padding-left: 0;
+    }
+}
+
+@include breakpoint(phone) {
+    .work-card {
+        position: relative;
+        width: 100%;
+    }
+    .work-content {
+        padding-left: 0;
+    }
 }
