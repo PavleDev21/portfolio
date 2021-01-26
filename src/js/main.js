@@ -224,6 +224,16 @@ function workItemTouch() {
     })
 }
 
+
+var $svg = $('.svg');
+var $svgWrap = $('.svg-banner-wrap');
+$( window ).resize(function() {
+    var calc = $svg.width();
+    var finish = calc*0.516;
+    $svgWrap.height(finish);
+});
+
+
 floatingNav();
 
 if (screen.width > 1024) {
@@ -237,3 +247,10 @@ if (screen.width <= 1024) {
 }
 
 
+//Ilustracija za hero banner lik za kompom i na ekranu plugin za kucanje i u <> pise css html js ili jquery tjt
+
+//ekran i kao half screen je koji jezik html kao samo crno belo onda kao css dodaju se boje a js kao scroll
+
+// 1 or 2
+
+// fix karakter ne radi mora mixin za hexagon

@@ -2,11 +2,12 @@
     background-color: $mine-shaft;
     text-align: center;
     overflow: hidden;
-    padding-top: 40vh;
+    //padding-top: 40vh;
     position: relative;
     height: 100vh;
 }
 .banner-title {
+    display: none;
     color: $white;
     margin-bottom: 30px;
     position: relative;
@@ -18,6 +19,7 @@
 .banner-name,
 .banner-surname {
     display: block;
+    display: none;
 }
 .banner-name {
     animation: 1.5s slidein-left;
@@ -30,6 +32,7 @@
     color: $white;
     opacity: 0;
     display: block;
+    display: none;
     text-align: center;
 }
 .banner-arrow {
@@ -43,6 +46,39 @@
     animation: 1.5s banner-arrow;
     animation-iteration-count: infinite;
 }
+.banner-img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.svg-banner-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+    height: 415px;
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.banner-content {
+    background-color: rgba(olive, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -79%);
+    width: 52%;
+    height: 58%;
+    z-index: 2;
+}
+
+// da mu na resize daje height tako sto izracuna width * 0.516
 
 @keyframes slidein-left {
     0% {
