@@ -1,3 +1,26 @@
+$(document).ready(function() {
+    $('.loader').fadeOut(1000);
+})
+
+
+function bannerCS() {
+    var $svg = $('.svg');
+    var $svgWrap = $('.svg-banner-wrap');
+    var calc = $svg.width();
+    var finish = calc*0.516;
+    $svgWrap.height(finish);
+}
+
+function bannerResize() {
+    var $svg = $('.svg');
+    var $svgWrap = $('.svg-banner-wrap');
+    $( window ).resize(function() {
+        var calc = $svg.width();
+        var finish = calc*0.516;
+        $svgWrap.height(finish);
+    });
+}
+
 $navBtn = $('.nav-btn');
 $nav = $('.navigation');
 
@@ -224,17 +247,9 @@ function workItemTouch() {
     })
 }
 
-
-var $svg = $('.svg');
-var $svgWrap = $('.svg-banner-wrap');
-$( window ).resize(function() {
-    var calc = $svg.width();
-    var finish = calc*0.516;
-    $svgWrap.height(finish);
-});
-
-
+bannerCS();
 floatingNav();
+bannerResize();
 
 if (screen.width > 1024) {
     scrollAbout();
@@ -253,4 +268,6 @@ if (screen.width <= 1024) {
 
 // 1 or 2
 
+
+// fix mora dok se loaduje da se dodeli height na svgWrap
 // fix karakter ne radi mora mixin za hexagon
