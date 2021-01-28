@@ -362,19 +362,15 @@ Glyphs list
   height: 100vh; }
 
 .banner-title {
-  display: none;
-  color: #FFFFFF;
-  margin-bottom: 30px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333333;
   text-align: center;
   font-size: 70px;
   line-height: 80px;
   font-weight: 700; }
-
-.banner-name,
-.banner-surname {
-  display: block;
-  display: none; }
 
 .banner-name {
   animation: 1.5s slidein-left; }
@@ -432,9 +428,9 @@ Glyphs list
   z-index: 2; }
 
 .banner-content-block {
+  display: none;
   height: 100%;
   padding: 15px;
-  display: inline-block;
   width: 50%;
   vertical-align: top; }
 
@@ -448,6 +444,7 @@ Glyphs list
   overflow: hidden;
   position: relative;
   height: 100%;
+  background-color: transparent;
   border-radius: 7px; }
 
 .banner-code {
@@ -462,11 +459,15 @@ Glyphs list
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.banner-html {
+  display: none; }
+
 .banner-css,
 .banner-js {
   display: none; }
 
 .banner-alternate-container {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -474,7 +475,20 @@ Glyphs list
   left: 50%;
   border-radius: 7px;
   transform: translateX(-50%);
-  background-color: white; }
+  background-color: #FFFFFF; }
+
+.alternate-h {
+  height: auto;
+  min-height: 100%; }
+
+.alternate-scroll {
+  top: 100%;
+  transform: translate(-50%, -100%);
+  transition: 2s; }
+
+.bac-color {
+  background-color: #333333;
+  transition: 0.3s; }
 
 .bac-line {
   margin-bottom: 13px;
@@ -486,6 +500,10 @@ Glyphs list
   background-color: #333333;
   border-radius: 5px; }
 
+.bac-line-color {
+  background-color: #F7484E;
+  transition: 0.3s; }
+
 .bac-line:nth-child(1) {
   margin-top: 13px; }
 
@@ -495,6 +513,19 @@ Glyphs list
 .bac-btn {
   width: 30%;
   height: 10px; }
+
+.fake-btn-color {
+  background-color: #F6AC04;
+  transition: 0.3s; }
+
+#orange-pen,
+#blue-pen,
+#yellow-pen {
+  transition: 0.3s; }
+
+.pen-slide {
+  transform: translateY(-20px);
+  transition: 0.3s; }
 
 @keyframes slidein-left {
   0% {
@@ -515,6 +546,23 @@ Glyphs list
     bottom: 55px; }
   100% {
     bottom: 45px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner-title {
+    font-size: 7vw;
+    line-height: 7vw; } }
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .banner-title {
+    font-size: 7vw;
+    line-height: 7vw; }
+  .banner-content-block {
+    padding: 8px; }
+  .banner-code {
+    font-size: 18px; }
+  .bac-line {
+    height: 5px;
+    margin-bottom: 7px; } }
 
 .about {
   position: relative; }

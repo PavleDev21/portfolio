@@ -22,6 +22,53 @@ function bannerResize() {
     });
 }
 
+function bannerAnimation() {
+    $title = $('.banner-title');
+    $mainBlocks = $('.banner-content-block');
+    $btn = $('.banner-btn');
+    $lineSection = $('.banner-alternate-container');
+    $bacLine = $('.bac-line');
+    $fakeBtn = $('.bac-btn');
+    $orangePen = $('#orange-pen');
+    $bluePen = $('#blue-pen');
+    $yellowPen = $('#yellow-pen');
+    $html = $('.banner-html');
+    $css = $('.banner-css');
+    $js = $('.banner-js');
+
+    $btn.on('click', function() {
+        $title.fadeOut(550);
+        $mainBlocks.fadeIn(550).css('display', 'inline-block');
+        $html.fadeIn(350);
+        $orangePen.addClass('pen-slide').delay(3700).queue(function(){
+            $orangePen.removeClass('pen-slide').dequeue();
+        }).queue(function() {
+            $lineSection.addClass('bac-color');
+            $bacLine.addClass('bac-line-color');
+            $html.slideUp();
+            $css.delay(500).slideDown();
+            $bluePen.addClass('pen-slide').delay(2000).queue(function() {
+                $bluePen.removeClass('pen-slide').dequeue();
+            }).queue(function() {
+                $css.slideUp();
+                $js.delay(1000).slideDown();
+                $fakeBtn.addClass('fake-btn-color').delay(1500).queue(function() {
+                    $lineSection.addClass('alternate-scroll').dequeue();
+                });
+                $yellowPen.addClass('pen-slide').delay(2000).queue(function() {
+                    $yellowPen.removeClass('pen-slide').dequeue();
+                })
+            })
+        });
+        $lineSection.delay(500).slideDown(3000).queue(function() {
+            $(this).addClass('alternate-h').dequeue();
+        });
+        //$html.hide('slide', {direction: 'up'});
+        //$css.show('slide', {direction: 'down'});
+    })
+}
+bannerAnimation();
+
 $navBtn = $('.nav-btn');
 $nav = $('.navigation');
 

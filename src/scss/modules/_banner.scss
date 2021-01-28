@@ -7,19 +7,15 @@
     height: 100vh;
 }
 .banner-title {
-    display: none;
-    color: $white;
-    margin-bottom: 30px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $mine-shaft;
     text-align: center;
     font-size: 70px;
     line-height: 80px;
     font-weight: 700;
-}
-.banner-name,
-.banner-surname {
-    display: block;
-    display: none;
 }
 .banner-name {
     animation: 1.5s slidein-left;
@@ -78,9 +74,10 @@
     z-index: 2;
 }
 .banner-content-block {
+    display: none;
     height: 100%;
     padding: 15px;
-    display: inline-block;
+    //display: inline-block;
     width: 50%;
     vertical-align: top;
 }
@@ -94,7 +91,7 @@
     overflow: hidden;
     position: relative;
     height: 100%;
-    //background-color: $mine-shaft;
+    background-color: transparent;
     border-radius: 7px;
 }
 .banner-code {
@@ -109,11 +106,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.banner-html {
+    display: none;
+}
 .banner-css,
 .banner-js {
     display: none;
 }
 .banner-alternate-container {
+    display: none;
     @extend %clearfix;
     position: absolute;
     width: 100%;
@@ -122,7 +123,20 @@
     left: 50%;
     border-radius: 7px;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: $white;
+}
+.alternate-h {
+    height: auto;
+    min-height: 100%;
+}
+.alternate-scroll {
+    top: 100%;
+    transform: translate(-50%, -100%);
+    transition: 2s;
+}
+.bac-color {
+    background-color: $mine-shaft;
+    transition: 0.3s;
 }
 .bac-line {
     margin-bottom: 13px;
@@ -134,6 +148,10 @@
     background-color: $mine-shaft;
     border-radius: 5px;
 }
+.bac-line-color {
+    background-color: $carnation;
+    transition: 0.3s;
+}
 .bac-line:nth-child(1) {
     margin-top: 13px;
 }
@@ -144,6 +162,21 @@
     width: 30%;
     height: 10px;
 }
+.fake-btn-color {
+    background-color: #F6AC04;
+    transition: 0.3s;
+}
+#orange-pen,
+#blue-pen,
+#yellow-pen {
+    transition: 0.3s;
+}
+.pen-slide {
+    transform: translateY(-20px);
+    transition: 0.3s;
+}
+
+
 @keyframes slidein-left {
     0% {
         transform: translateX(-100%);
@@ -171,5 +204,29 @@
     }
     100% {
         bottom: 45px;
+    }
+}
+
+@include breakpoint(tablet) {
+    .banner-title {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+}
+
+@include breakpoint(phone) {
+    .banner-title {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+    .banner-content-block {
+        padding: 8px;
+    }
+    .banner-code {
+        font-size: 18px;
+    }
+    .bac-line {
+        height: 5px;
+        margin-bottom: 7px;
     }
 }
