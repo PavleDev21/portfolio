@@ -68,7 +68,7 @@
     }
 }
 .banner-content {
-    background-color: rgba(olive, 0.5);
+    font-size: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,9 +77,73 @@
     height: 58%;
     z-index: 2;
 }
-
-// da mu na resize daje height tako sto izracuna width * 0.516
-
+.banner-content-block {
+    height: 100%;
+    padding: 15px;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.banner-content-block:nth-child(1) {
+    padding-right: 7px;
+}
+.banner-content-block:nth-child(2) {
+    padding-left: 7px;
+}
+.banner-content-block-wrap {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    //background-color: $mine-shaft;
+    border-radius: 7px;
+}
+.banner-code {
+    display: block;
+    width: 100%;
+    color: #535461;
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-css,
+.banner-js {
+    display: none;
+}
+.banner-alternate-container {
+    @extend %clearfix;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    border-radius: 7px;
+    transform: translateX(-50%);
+    background-color: white;
+}
+.bac-line {
+    margin-bottom: 13px;
+    margin-left: 2%;
+    float: left;
+    position: relative;
+    width: 80%;
+    height: 7px;
+    background-color: $mine-shaft;
+    border-radius: 5px;
+}
+.bac-line:nth-child(1) {
+    margin-top: 13px;
+}
+.bac-line-wide {
+    width: 95%;
+}
+.bac-btn {
+    width: 30%;
+    height: 10px;
+}
 @keyframes slidein-left {
     0% {
         transform: translateX(-100%);
