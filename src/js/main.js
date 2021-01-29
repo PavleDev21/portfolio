@@ -26,6 +26,7 @@ function bannerAnimation() {
     $title = $('.banner-title');
     $mainBlocks = $('.banner-content-block');
     $btn = $('.banner-btn');
+    $btnClose = $('.banner-btn-close');
     $lineSection = $('.banner-alternate-container');
     $bacLine = $('.bac-line');
     $fakeBtn = $('.bac-btn');
@@ -63,8 +64,17 @@ function bannerAnimation() {
         $lineSection.delay(500).slideDown(3000).queue(function() {
             $(this).addClass('alternate-h').dequeue();
         });
-        //$html.hide('slide', {direction: 'up'});
-        //$css.show('slide', {direction: 'down'});
+    })
+    $btnClose.on('click', function() {
+        $mainBlocks.fadeOut(500);
+        $lineSection.hide();
+        $lineSection.removeClass('bac-color');
+        $lineSection.removeClass('alternate-scroll');
+        $bacLine.removeClass('bac-line-color');
+        $lineSection.removeClass('alternate-h');
+        $fakeBtn.removeClass('fake-btn-color');
+        $js.hide();
+        $title.fadeIn(500);
     })
 }
 bannerAnimation();
