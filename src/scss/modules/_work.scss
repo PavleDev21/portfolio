@@ -38,7 +38,6 @@
 }
 .work-main-btn {
     padding: 0;
-    overflow: hidden;
     width: 70px;
     height: 70px;
     visibility: visible;
@@ -61,15 +60,7 @@
         outline: none;
     }
 }
-.work-main-icon {
-    position: absolute;
-    top: -35px;
-    left: -3px;
-    font-size: 95px;
-    color: rgba($mine-shaft, 0.8);
-    background-color: transparent;
-    transition: 0.3s;
-}
+//////////////
 .work-main-btn-text {
     color: $white;
     text-transform: uppercase;
@@ -140,6 +131,37 @@
 }
 .work-item-content {
     display: none;
+}
+//Hexagon idea from: http://jtauber.github.io/articles/css-hexagon.html
+.hex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 62px;
+    height: 34px;
+    background-color: $mine-shaft;
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid $mine-shaft;
+        border-left: 31px solid transparent;
+        border-right: 31px solid transparent;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+    &::after {
+        content: "";
+        width: 0;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        border-top: 20px solid $mine-shaft;
+        border-left: 31px solid transparent;
+        border-right: 31px solid transparent;
+    }
 }
 
 @include breakpoint(tablet) {
