@@ -37,33 +37,51 @@ function bannerAnimation() {
     $css = $('.banner-css');
     $js = $('.banner-js');
 
-    $btn.on('click', function() {
-        $title.fadeOut(550);
-        $mainBlocks.fadeIn(550).css('display', 'inline-block');
-        $html.fadeIn(350);
-        $orangePen.addClass('pen-slide').delay(3700).queue(function(){
-            $orangePen.removeClass('pen-slide').dequeue();
-        }).queue(function() {
+    function orange() {
+        $orangePen.addClass('pen-slide');
+        setTimeout(function() {
+            $orangePen.removeClass('pen-slide');
+        }, 3700)
+    }
+
+    function blue() {
+        setTimeout(function() {
             $lineSection.addClass('bac-color');
             $bacLine.addClass('bac-line-color');
             $html.slideUp();
             $css.delay(500).slideDown();
-            $bluePen.addClass('pen-slide').delay(2000).queue(function() {
-                $bluePen.removeClass('pen-slide').dequeue();
-            }).queue(function() {
-                $css.slideUp();
-                $js.delay(1000).slideDown();
-                $fakeBtn.addClass('fake-btn-color').delay(1500).queue(function() {
-                    $lineSection.addClass('alternate-scroll').dequeue();
-                });
-                $yellowPen.addClass('pen-slide').delay(2000).queue(function() {
-                    $yellowPen.removeClass('pen-slide').dequeue();
-                })
-            })
-        });
+            $bluePen.addClass('pen-slide');
+        }, 3700)
+        setTimeout(function() {
+            $bluePen.removeClass('pen-slide');
+        }, 5200)
+    }
+
+    function yellow() {
+        setTimeout(function() {
+            $css.slideUp();
+            $js.delay(1000).slideDown();
+            $fakeBtn.addClass('fake-btn-color');
+        }, 5200)
+        setTimeout(function() {
+            $lineSection.addClass('alternate-scroll');
+            $yellowPen.addClass('pen-slide');
+        }, 6700)
+        setTimeout(function() {
+            $yellowPen.removeClass('pen-slide');
+        }, 7700)
+    }
+
+    $btn.on('click', function() {
+        $title.fadeOut(550);
+        $mainBlocks.fadeIn(550).css('display', 'inline-block');
+        $html.fadeIn(350);
         $lineSection.delay(500).slideDown(3000).queue(function() {
             $(this).addClass('alternate-h').dequeue();
         });
+        orange();
+        blue();
+        yellow();
     })
     $btnClose.on('click', function() {
         $mainBlocks.fadeOut(500);

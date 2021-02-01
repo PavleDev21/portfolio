@@ -730,7 +730,6 @@ Glyphs list
 
 .work-close-btn {
   padding: 0;
-  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   border: none;
@@ -756,8 +755,8 @@ Glyphs list
 
 .work-close-btn-span {
   position: absolute;
-  top: 24px;
-  left: 9px;
+  top: 13px;
+  left: 8px;
   height: 3px;
   width: 30px;
   background-color: #FFFFFF;
@@ -807,6 +806,34 @@ Glyphs list
     border-top: 20px solid #333333;
     border-left: 31px solid transparent;
     border-right: 31px solid transparent; }
+
+.hex-mini {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 28px;
+  background-color: #F7484E; }
+  .hex-mini::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #F7484E;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    position: absolute;
+    top: -15px;
+    left: 0; }
+  .hex-mini::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-top: 15px solid #F7484E;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent; }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .work-card {
