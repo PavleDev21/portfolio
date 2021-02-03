@@ -104,14 +104,38 @@ function bannerAnimation() {
         $btn.slideDown();
     })
 }
-bannerAnimation();
 
-$navBtn = $('.nav-btn');
-$nav = $('.navigation');
+function nav() {
+    $navLink = $('.nav-link');
+    $navBtn = $('.nav-btn');
+    $nav = $('.navigation');
+    $navIcon = $('.nav-btn-icon-span');
+    $header  = $('.header');
+    $jsSection = $('.js-section');
 
-$navBtn.on('click', function() {
-    $nav.toggleClass('nav-show');
-})
+    if(screen.width <= 1024) {
+        $header.css('display','block');
+    }
+
+    $navBtn.on('click', function() {
+        $nav.toggleClass('nav-show');
+        $navIcon.toggleClass('nav-icon-span-active');
+    })
+
+    $navLink.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    })
+
+    $navLink.on('click', function() {
+        var index = $(this).data('index');
+        var sectionOffset = $('.js-section[data-index="'+ index + '"]').offset().top;
+        $('html,body').stop().animate({scrollTop: sectionOffset}, 900);
+        $nav.toggleClass('nav-show');
+        $navIcon.toggleClass('nav-icon-span-active');
+    })
+
+}
 
 
 function floatingNav() {
@@ -170,17 +194,10 @@ function scrollAbout() {
     });
 }
 
-var offsetBtm;
-$(document).scroll(function() {
-    offsetBtm = $('.work').offset().top + $('.work').height() - $('.work-card').height();
-})
 
 function scrollWork() {
     var $workSticky = $('.work-card');
     var sectionOffsetTop = $('.work').offset().top;
-    //var triggerOffset = sectionOffsetTop + $('.work').height() - $workSticky.height();
-    //doesn't work when element changes height constant bottom offset calculation needed
-    //don't know fix when last item content is less than 100vh!!!
 
     $(document).scroll(function() {
         if ( $(document).scrollTop() >= sectionOffsetTop ) {
@@ -346,9 +363,12 @@ function workItemTouch() {
     })
 }
 
-bannerCS();
+nav();
 floatingNav();
+bannerCS();
 bannerResize();
+bannerAnimation();
+
 
 if (screen.width > 1024) {
     scrollAbout();
@@ -359,14 +379,3 @@ if (screen.width > 1024) {
 if (screen.width <= 1024) {
     workItemTouch();
 }
-
-
-//Ilustracija za hero banner lik za kompom i na ekranu plugin za kucanje i u <> pise css html js ili jquery tjt
-
-//ekran i kao half screen je koji jezik html kao samo crno belo onda kao css dodaju se boje a js kao scroll
-
-// 1 or 2
-
-
-// fix mora dok se loaduje da se dodeli height na svgWrap
-// fix karakter ne radi mora mixin za hexagon
