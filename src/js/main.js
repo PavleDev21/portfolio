@@ -60,21 +60,21 @@ function bannerAnimation() {
     function yellow() {
         setTimeout(function() {
             $css.slideUp();
+            $yellowPen.addClass('pen-slide');
             $js.delay(1000).slideDown();
             $fakeBtn.addClass('fake-btn-color');
         }, 5200)
         setTimeout(function() {
             $lineSection.addClass('alternate-scroll');
-            $yellowPen.addClass('pen-slide');
         }, 6700)
         setTimeout(function() {
             $yellowPen.removeClass('pen-slide');
-        }, 7700)
+        }, 7400)
     }
     function closeBtn() {
         setTimeout(function() {
             $btnClose.fadeIn();
-        }, 7700)
+        }, 7400)
     }
 
     $btn.on('click', function() {

@@ -142,11 +142,11 @@ Glyphs list
 .icon-click::before {
   content: '\ea01'; }
 
-.header::before, .banner-alternate-container::before, .header::after, .banner-alternate-container::after {
+.banner-alternate-container::before, .banner-alternate-container::after {
   content: '';
   display: table; }
 
-.header::after, .banner-alternate-container::after {
+.banner-alternate-container::after {
   clear: both; }
 
 .wrapper {
@@ -201,11 +201,11 @@ Glyphs list
     transform: scale(1); } }
 
 .header {
-  display: none;
   position: fixed;
   top: 0;
-  right: 0;
-  width: 100%;
+  left: 0;
+  width: 65px;
+  display: block;
   background-color: transparent;
   z-index: 10; }
 
@@ -216,7 +216,6 @@ Glyphs list
   margin-left: 20px;
   border: none;
   position: relative;
-  float: left;
   z-index: 15;
   background-color: transparent;
   cursor: pointer; }
@@ -251,14 +250,14 @@ Glyphs list
   background-color: #000000;
   position: absolute;
   top: 0;
-  right: -50%;
+  right: 100vw;
   height: 100vh;
-  width: 50%;
+  width: 100vw;
   transition: 0.2s;
   z-index: 12; }
 
 .nav-show {
-  right: 0;
+  right: calc(100% - 100vw);
   transition: 0.2s; }
 
 .nav-list {
@@ -283,13 +282,6 @@ Glyphs list
   .nav-link:hover {
     color: #F7484E;
     transition: 0.2s; }
-
-@media only screen and (min-width: 120px) and (max-width: 767px) {
-  .navigation {
-    right: -100%;
-    width: 100%; }
-  .nav-show {
-    right: 0; } }
 
 .nav-rep {
   width: 100%;
@@ -427,7 +419,7 @@ Glyphs list
 .banner-btn {
   cursor: pointer;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   left: 50%;
   transform: translateX(-50%);
   border: 0;
