@@ -204,7 +204,7 @@ Glyphs list
   position: fixed;
   top: 0;
   left: 0;
-  width: 65px;
+  width: 71px;
   display: none;
   background-color: transparent;
   z-index: 10; }
@@ -292,18 +292,18 @@ Glyphs list
     transition: 0.2s; }
 
 .navigation {
-  background-color: #000000;
+  background-color: #333333;
   position: absolute;
   top: 0;
   right: 100vw;
   height: 100vh;
   width: 100vw;
-  transition: 0.2s;
+  transition: 0.3s;
   z-index: 12; }
 
 .nav-show {
   right: calc(100% - 100vw);
-  transition: 0.2s; }
+  transition: 0.3s; }
 
 .nav-list {
   position: absolute;
