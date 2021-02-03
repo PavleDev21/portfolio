@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //$('.loader').delay(2300).fadeOut(1000);
+    //$('.loader').delay(2300).fadeOut();
     $('.loader').hide();
 })
 
@@ -71,9 +71,15 @@ function bannerAnimation() {
             $yellowPen.removeClass('pen-slide');
         }, 7700)
     }
+    function closeBtn() {
+        setTimeout(function() {
+            $btnClose.fadeIn();
+        }, 7700)
+    }
 
     $btn.on('click', function() {
         $title.fadeOut(550);
+        $btn.slideUp();
         $mainBlocks.fadeIn(550).css('display', 'inline-block');
         $html.fadeIn(350);
         $lineSection.delay(500).slideDown(3000).queue(function() {
@@ -82,6 +88,7 @@ function bannerAnimation() {
         orange();
         blue();
         yellow();
+        closeBtn();
     })
     $btnClose.on('click', function() {
         $mainBlocks.fadeOut(500);
@@ -92,7 +99,9 @@ function bannerAnimation() {
         $lineSection.removeClass('alternate-h');
         $fakeBtn.removeClass('fake-btn-color');
         $js.hide();
+        $btnClose.fadeOut(500);
         $title.fadeIn(500);
+        $btn.slideDown();
     })
 }
 bannerAnimation();
@@ -103,8 +112,6 @@ $nav = $('.navigation');
 $navBtn.on('click', function() {
     $nav.toggleClass('nav-show');
 })
-
-$('.banner-subtitle').delay(1500).animate({opacity: 1}, {duration: 700});
 
 
 function floatingNav() {
@@ -194,6 +201,7 @@ function scrollWork() {
 function workItem() {
     var $workContent = $('.work-content');
     var $workBtn = $('.work-main-btn');
+    var $workSubtitle = $('.work-item-info-subtitle');
     var $closeBtn = $('.work-close-btn');
     var $workCard = $('.work-card');
     var $workItemContent = $('.work-item-content');
@@ -202,6 +210,11 @@ function workItem() {
     var width;
 
     $workBtn.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $workSubtitle.each(function(i) {
         var $this = $(this);
         $this.attr('data-index', i);
     });
@@ -246,6 +259,7 @@ function workItem() {
         }
         $('.work-close-btn[data-index="'+ index + '"]').addClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').addClass('main-btn-hidden');
+        $('.work-item-info-subtitle[data-index="'+ index + '"]').addClass('wii-subtitle-move');
         counter++;
     })
 
@@ -267,18 +281,25 @@ function workItem() {
         $('.work-item-content[data-index="'+ index + '"]').delay(2100).hide(0);
         $('.work-close-btn[data-index="'+ index + '"]').removeClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').removeClass('main-btn-hidden');
+        $('.work-item-info-subtitle[data-index="'+ index + '"]').removeClass('wii-subtitle-move');
         counter--;
     })
 }
 
 function workItemTouch() {
     var $workBtn = $('.work-main-btn');
+    var $workSubtitle = $('.work-item-info-subtitle');
     var $closeBtn = $('.work-close-btn');
     var $workCard = $('.work-card');
     var $workItemContent = $('.work-item-content');
     var $workItem = $('.work-item');
 
     $workBtn.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
+    $workSubtitle.each(function(i) {
         var $this = $(this);
         $this.attr('data-index', i);
     });
@@ -308,6 +329,7 @@ function workItemTouch() {
         }, 1000);
         $('.work-close-btn[data-index="'+ index + '"]').addClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').addClass('main-btn-hidden');
+        $('.work-item-info-subtitle[data-index="'+ index + '"]').addClass('wii-subtitle-move');
     })
 
     $closeBtn.on('click', function() {
@@ -320,6 +342,7 @@ function workItemTouch() {
         $('.work-item-content[data-index="'+ index + '"]').delay(2100).hide(0);
         $('.work-close-btn[data-index="'+ index + '"]').removeClass('close-btn-visible');
         $('.work-main-btn[data-index="'+ index + '"]').removeClass('main-btn-hidden');
+        $('.work-item-info-subtitle[data-index="'+ index + '"]').removeClass('wii-subtitle-move');
     })
 }
 

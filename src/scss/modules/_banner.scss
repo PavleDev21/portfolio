@@ -2,7 +2,6 @@
     background-color: $mine-shaft;
     text-align: center;
     overflow: hidden;
-    //padding-top: 40vh;
     position: relative;
     height: 100vh;
 }
@@ -25,22 +24,15 @@
     animation: 1.5s slidein-right;
 }
 .banner-subtitle {
-    color: $white;
-    opacity: 0;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 700;
+    color: $carnation;
+    opacity: 1;
     display: block;
-    display: none;
     text-align: center;
-}
-.banner-arrow {
-    display: none;
-    font-size: 28px;
-    color: $white;
-    position: absolute;
-    bottom: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: 1.5s banner-arrow;
-    animation-iteration-count: infinite;
 }
 .banner-img {
     width: 80%;
@@ -77,15 +69,61 @@
     display: none;
     height: 100%;
     padding: 15px;
-    //display: inline-block;
     width: 50%;
     vertical-align: top;
 }
-.banner-content-block:nth-child(1) {
-    padding-right: 7px;
+.banner-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    padding: 5px 42px;
+    border-radius: 0 0 8px 8px;
+    background-color: #e0e0e0;
+    &:focus {
+        outline: none;
+    }
+    .icon-click {
+        font-size: 18px;
+        fill: $mine-shaft;
+    }
 }
-.banner-content-block:nth-child(2) {
-    padding-left: 7px;
+.banner-btn-close {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    &:focus {
+        outline: none;
+    }
+}
+.banner-btn-close-icon {
+    height: 3.5px;
+    width: 40px;
+    border-radius: 3px;
+    background-color: $carnation;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%) rotate(45deg);
+    &::after {
+        content: '';
+        height: 3.5px;
+        width: 40px;
+        border-radius: 3px;
+        background-color: $carnation;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        transform: rotate(90deg);
+    }
 }
 .banner-content-block-wrap {
     overflow: hidden;
@@ -114,6 +152,7 @@
     display: none;
 }
 .banner-alternate-container {
+    padding: 0 3px;
     display: none;
     @extend %clearfix;
     position: absolute;
@@ -195,18 +234,6 @@
     }
 }
 
-@keyframes banner-arrow {
-    0% {
-        bottom: 45px;
-    }
-    50% {
-        bottom: 55px;
-    }
-    100% {
-        bottom: 45px;
-    }
-}
-
 @include breakpoint(tablet) {
     .banner-title {
         font-size: 7vw;
@@ -215,6 +242,19 @@
 }
 
 @include breakpoint(phone) {
+    .banner-btn {
+        padding: 4px 27px;
+    }
+    .banner-btn-close {
+        width: 26px;
+        height: 26px;
+    }
+    .banner-btn-close-icon {
+        width: 26px;
+        &::after {
+            width: 26px;
+        }
+    }
     .banner-title {
         font-size: 7vw;
         line-height: 7vw;
@@ -223,7 +263,7 @@
         padding: 8px;
     }
     .banner-code {
-        font-size: 18px;
+        font-size: 17px;
     }
     .bac-line {
         height: 5px;

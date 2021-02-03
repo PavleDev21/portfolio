@@ -3,11 +3,11 @@ iconfont Webfont
 */
 @font-face {
 	font-family: 'iconfont';
-	src: url('../fonts/iconfont.eot?1610381531557');
-	src: url('../fonts/iconfont.eot?#iefix-1610381531557') format('embedded-opentype'),
-		url('../fonts/iconfont.woff2?1610381531557') format('woff2'),
-		url('../fonts/iconfont.woff?1610381531557') format('woff'),
-		url('../fonts/iconfont.ttf?1610381531557') format('truetype');
+	src: url('../fonts/iconfont.eot?1612292753096');
+	src: url('../fonts/iconfont.eot?#iefix-1612292753096') format('embedded-opentype'),
+		url('../fonts/iconfont.woff2?1612292753096') format('woff2'),
+		url('../fonts/iconfont.woff?1612292753096') format('woff'),
+		url('../fonts/iconfont.ttf?1612292753096') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -33,10 +33,6 @@ iconfont Webfont
 Glyphs list
 */
 
-.icon-banner-arrow::before {
+.icon-click::before {
 	content: '\ea01';
-}
-
-.icon-zuriosm::before {
-	content: '\ea02';
 }
