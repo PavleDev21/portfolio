@@ -939,16 +939,29 @@ Glyphs list
   transition: 0.5s; }
 
 .work-item-content {
-  padding: 0 20px;
   display: none; }
 
-.wic-intro {
+.wic-text {
   width: 60%;
   margin: 75px auto;
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.35px; }
+
+.wic-demo {
+  display: block;
+  margin: 75px 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.35px; }
+
+.wic-demo-link {
+  color: #333333; }
+  .wic-demo-link:hover {
+    text-decoration: none; }
 
 .test-imgg {
   max-width: 100%; }
