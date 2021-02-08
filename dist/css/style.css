@@ -972,7 +972,7 @@ Glyphs list
     width: 100%; }
   .work-content {
     padding-left: 0; }
-  .wic-intro {
+  .wic-text {
     width: 80%; } }
 
 @media only screen and (min-width: 120px) and (max-width: 767px) {
@@ -981,8 +981,12 @@ Glyphs list
     width: 100%; }
   .work-content {
     padding-left: 0; }
-  .wic-intro {
-    width: 95%; } }
+  .wic-text {
+    width: 95%; }
+  .wic-demo-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center; } }
 
 .contact {
   position: relative;
