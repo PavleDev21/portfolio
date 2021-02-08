@@ -1,0 +1,51 @@
+.contact {
+    position: relative;
+    font-size: 0;
+}
+.contact-card {
+    display: inline-block;
+    vertical-align: top;
+    height: 100vh;
+    background-color: $mine-shaft;
+    position: relative;
+    width: 50%;
+}
+.contact-card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-size: 65px;
+    line-height: 70px;
+    font-weight: 700;
+}
+.contact-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 96px;
+    height: 100vh;
+}
+
+@include breakpoint(tablet) {
+    .contact-card {
+        display: block;
+        width: 100%;
+    }
+    .contact-content {
+        display: block;
+        width: 100%;
+    }
+}
+
+@include breakpoint(phone) {
+    .contact-card {
+        display: block;
+        width: 100%;
+    }
+    .contact-content {
+        display: block;
+        width: 100%;
+    }
+}

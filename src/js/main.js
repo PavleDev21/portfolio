@@ -142,6 +142,7 @@ function floatingNav() {
     var $navItemMain = $('.navr-link');
     var $navItemAbout = $('.about-navr-link');
     var $navItemWork = $('.work-navr-link');
+    var $navItemContact = $('.contact-navr-link');
     var $jsSection = $('.js-section');
 
     $navItemMain.each(function(i) {
@@ -159,6 +160,11 @@ function floatingNav() {
         $this.attr('data-index', i);
     });
 
+    $navItemContact.each(function(i) {
+        var $this = $(this);
+        $this.attr('data-index', i);
+    });
+
     $jsSection.each(function(i) {
         var $this = $(this);
         $this.attr('data-index', i);
@@ -172,6 +178,13 @@ function floatingNav() {
 
 }
 
+function floatingHide() {
+    var $navMobile = $('.nav-mobile');
+
+    if(screen.width <= 1024) {
+        $navMobile.css('display' , 'none');
+    }
+}
 
 function scrollAbout() {
     var $aboutSticky = $('.about-card');
@@ -194,10 +207,13 @@ function scrollAbout() {
     });
 }
 
-
 function scrollWork() {
     var $workSticky = $('.work-card');
     var sectionOffsetTop = $('.work').offset().top;
+    var offsetBtm;
+    $(document).scroll(function() {
+        offsetBtm = $('.work').offset().top + $('.work').height() - $('.work-card').height();
+    })
 
     $(document).scroll(function() {
         if ( $(document).scrollTop() >= sectionOffsetTop ) {
@@ -365,6 +381,9 @@ function workItemTouch() {
 
 nav();
 floatingNav();
+///////////////
+floatingHide();
+///////////////
 bannerCS();
 bannerResize();
 bannerAnimation();

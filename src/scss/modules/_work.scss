@@ -207,7 +207,19 @@
     transition: 0.5s;
 }
 .work-item-content {
+    padding: 0 20px;
     display: none;
+}
+.wic-intro {
+    width: 60%;
+    margin: 75px auto;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+}
+.test-imgg {
+    max-width: 100%;
 }
 
 @include breakpoint(tablet) {
@@ -218,6 +230,9 @@
     .work-content {
         padding-left: 0;
     }
+    .wic-intro {
+        width: 80%;
+    }
 }
 
 @include breakpoint(phone) {
@@ -227,5 +242,8 @@
     }
     .work-content {
         padding-left: 0;
+    }
+    .wic-intro {
+        width: 95%;
     }
 }

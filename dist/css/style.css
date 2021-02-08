@@ -672,27 +672,39 @@ Glyphs list
   padding-left: calc(50% + 96px);
   min-height: 130vh; }
 
-.about-skills {
-  display: none;
-  padding-top: 100px; }
+.about-journey {
+  margin-bottom: 60px; }
 
-.as-item {
-  padding: 0 15px;
-  text-align: center;
-  display: inline-block; }
+.ajourney-title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px; }
 
-.as-icon {
-  height: 55px;
-  margin-bottom: 5px;
-  animation: 1.5s icon-float;
-  animation-iteration-count: infinite; }
-
-.as-title {
+.ajourney-text {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0.5px;
-  display: block; }
+  line-height: 20px; }
+
+.askills-title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px; }
+
+.askills-text {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; }
+
+.about-intro {
+  margin-bottom: 60px; }
 
 .aintro-title-mini {
   color: #000000;
@@ -927,18 +939,79 @@ Glyphs list
   transition: 0.5s; }
 
 .work-item-content {
+  padding: 0 20px;
   display: none; }
+
+.wic-intro {
+  width: 60%;
+  margin: 75px auto;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.35px; }
+
+.test-imgg {
+  max-width: 100%; }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .work-card {
     position: relative;
     width: 100%; }
   .work-content {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .wic-intro {
+    width: 80%; } }
 
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .work-card {
     position: relative;
     width: 100%; }
   .work-content {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .wic-intro {
+    width: 95%; } }
+
+.contact {
+  position: relative;
+  font-size: 0; }
+
+.contact-card {
+  display: inline-block;
+  vertical-align: top;
+  height: 100vh;
+  background-color: #333333;
+  position: relative;
+  width: 50%; }
+
+.contact-card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 65px;
+  line-height: 70px;
+  font-weight: 700; }
+
+.contact-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 96px;
+  height: 100vh; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact-card {
+    display: block;
+    width: 100%; }
+  .contact-content {
+    display: block;
+    width: 100%; } }
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .contact-card {
+    display: block;
+    width: 100%; }
+  .contact-content {
+    display: block;
+    width: 100%; } }
