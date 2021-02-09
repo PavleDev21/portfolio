@@ -276,7 +276,9 @@ function workItem() {
         }, 1000);
         width = $('.work-card').width() / $('.work-card').parent().width() * 100;
         width = Math.round(width);
+        console.log(width);
         if(width != 30) {
+            console.log("aa");
             $workCard.delay(900).animate({
                 width: '30%'
             }, 1000);
@@ -285,6 +287,7 @@ function workItem() {
                 height: '40vh'
             }, 1000);
         } else {
+            console.log("bb");
             $('.work-item-content[data-index="'+ index + '"]').delay(1000).show(0);
             $('.work-item[data-index="'+ index + '"]').delay(1100).animate({
                 height: '40vh'

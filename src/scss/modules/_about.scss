@@ -2,7 +2,7 @@
     position: relative;
 }
 .about-card {
-    height: 100vh;
+    min-height: 100vh;
     background-color: $carnation;
     position: absolute;
     top: 0;
@@ -29,69 +29,42 @@
 .about-content {
     padding: 96px;
     padding-left: calc(50% + 96px);
+    padding-bottom: calc(96px + 53px);
     min-height: 130vh;
 }
 .about-journey {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
-.ajourney-title {
+.about-title {
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
-.ajourney-text {
+.about-text {
     margin-bottom: 30px;
     font-size: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
-.about-skills {
-    //padding: 20px 0;
+.about-git {
+    position: absolute;
+    left: calc(50% + 96px);
+    bottom: 96px;
 }
-.askills-title {
-    margin-bottom: 30px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-.askills-text {
-    margin-bottom: 30px;
-    font-size: 16px;
-    font-size: 16px;
+.about-git-title {
+    font-size: 17px;
+    line-height: 22px;
     font-weight: 400;
-    line-height: 20px;
+    margin-bottom: 15px;
 }
-.about-intro {
-    margin-bottom: 60px;
-}
-.aintro-title-mini {
-    color: $black;
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-.aintro-text {
-    color: $black;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-@keyframes icon-float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
-    100% {
-        transform: translateY(0);
+.about-link {
+    display: inline-block;
+    color: $carnation;
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -102,6 +75,11 @@
     }
     .about-content {
         padding: 48px;
+        padding-bottom: calc(48px + 53px);
+    }
+    .about-git {
+        left: 48px;
+        bottom: 48px;
     }
 }
 
@@ -112,5 +90,10 @@
     }
     .about-content {
         padding: 24px;
+        padding-bottom: calc(24px + 75px);
+    }
+    .about-git {
+        left: 24px;
+        bottom: 24px;
     }
 }

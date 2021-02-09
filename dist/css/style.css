@@ -643,7 +643,7 @@ Glyphs list
   position: relative; }
 
 .about-card {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #F7484E;
   position: absolute;
   top: 0;
@@ -670,77 +670,64 @@ Glyphs list
 .about-content {
   padding: 96px;
   padding-left: calc(50% + 96px);
+  padding-bottom: calc(96px + 53px);
   min-height: 130vh; }
 
 .about-journey {
-  margin-bottom: 60px; }
+  margin-bottom: 70px; }
 
-.ajourney-title {
+.about-title {
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 0.5px; }
 
-.ajourney-text {
+.about-text {
   margin-bottom: 30px;
   font-size: 16px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px; }
 
-.askills-title {
-  margin-bottom: 30px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px; }
+.about-git {
+  position: absolute;
+  left: calc(50% + 96px);
+  bottom: 96px; }
 
-.askills-text {
-  margin-bottom: 30px;
-  font-size: 16px;
-  font-size: 16px;
+.about-git-title {
+  font-size: 17px;
+  line-height: 22px;
   font-weight: 400;
-  line-height: 20px; }
+  margin-bottom: 15px; }
 
-.about-intro {
-  margin-bottom: 60px; }
-
-.aintro-title-mini {
-  color: #000000;
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: 0.5px; }
-
-.aintro-text {
-  color: #000000;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px; }
-
-@keyframes icon-float {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(-3px); }
-  100% {
-    transform: translateY(0); } }
+.about-link {
+  display: inline-block;
+  color: #F7484E; }
+  .about-link:hover {
+    text-decoration: none; }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .about-card {
     position: relative;
     width: 100%; }
   .about-content {
-    padding: 48px; } }
+    padding: 48px;
+    padding-bottom: calc(48px + 53px); }
+  .about-git {
+    left: 48px;
+    bottom: 48px; } }
 
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .about-card {
     position: relative;
     width: 100%; }
   .about-content {
-    padding: 24px; } }
+    padding: 24px;
+    padding-bottom: calc(24px + 75px); }
+  .about-git {
+    left: 24px;
+    bottom: 24px; } }
 
 .work {
   position: relative; }
@@ -943,7 +930,8 @@ Glyphs list
 
 .wic-text {
   width: 60%;
-  margin: 75px auto;
+  margin: 0 auto;
+  padding: 75px 0;
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
@@ -951,7 +939,7 @@ Glyphs list
 
 .wic-demo {
   display: block;
-  margin: 75px 0;
+  padding: 75px 0;
   text-align: center;
   font-size: 15px;
   line-height: 19px;
@@ -982,7 +970,7 @@ Glyphs list
   .work-content {
     padding-left: 0; }
   .wic-text {
-    width: 95%; }
+    width: 90%; }
   .wic-demo-link {
     display: block;
     margin-top: 15px;

@@ -211,7 +211,8 @@
 }
 .wic-text {
     width: 60%;
-    margin: 75px auto;
+    margin: 0 auto;
+    padding: 75px 0;
     font-size: 15px;
     line-height: 19px;
     font-weight: 400;
@@ -219,7 +220,7 @@
 }
 .wic-demo {
     display: block;
-    margin: 75px 0;
+    padding: 75px 0;
     text-align: center;
     font-size: 15px;
     line-height: 19px;
@@ -258,7 +259,7 @@
         padding-left: 0;
     }
     .wic-text {
-        width: 95%;
+        width: 90%;
     }
     .wic-demo-link {
         display: block;
