@@ -686,7 +686,6 @@ Glyphs list
 .about-text {
   margin-bottom: 30px;
   font-size: 16px;
-  font-size: 16px;
   font-weight: 400;
   line-height: 20px; }
 
@@ -702,6 +701,9 @@ Glyphs list
   margin-bottom: 15px; }
 
 .about-link {
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
   display: inline-block;
   color: #F7484E; }
   .about-link:hover {
@@ -723,11 +725,11 @@ Glyphs list
     position: relative;
     width: 100%; }
   .about-content {
-    padding: 24px;
-    padding-bottom: calc(24px + 75px); }
+    padding: 35px;
+    padding-bottom: calc(35px + 75px); }
   .about-git {
-    left: 24px;
-    bottom: 24px; } }
+    left: 35px;
+    bottom: 35px; } }
 
 .work {
   position: relative; }
@@ -1005,13 +1007,36 @@ Glyphs list
   padding: 96px;
   height: 100vh; }
 
+.contact-text {
+  margin-bottom: 23px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px; }
+
+.contact-name {
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px; }
+
+.contact-mail {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  display: inline-block;
+  color: #F7484E; }
+  .contact-mail:hover {
+    text-decoration: none; }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .contact-card {
     display: block;
     width: 100%; }
   .contact-content {
     display: block;
-    width: 100%; } }
+    width: 100%;
+    padding: 48px; } }
 
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .contact-card {
@@ -1019,4 +1044,5 @@ Glyphs list
     width: 100%; }
   .contact-content {
     display: block;
-    width: 100%; } }
+    width: 100%;
+    padding: 35px; } }

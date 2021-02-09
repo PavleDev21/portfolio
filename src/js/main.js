@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(window).on('load', function() {
     //$('.loader').delay(2300).fadeOut();
     $('.loader').hide();
-})
+});
 
 
 function bannerCS() {

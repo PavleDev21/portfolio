@@ -45,7 +45,6 @@
 .about-text {
     margin-bottom: 30px;
     font-size: 16px;
-    font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
@@ -61,6 +60,9 @@
     margin-bottom: 15px;
 }
 .about-link {
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
     display: inline-block;
     color: $carnation;
     &:hover {
@@ -89,11 +91,11 @@
         width: 100%;
     }
     .about-content {
-        padding: 24px;
-        padding-bottom: calc(24px + 75px);
+        padding: 35px;
+        padding-bottom: calc(35px + 75px);
     }
     .about-git {
-        left: 24px;
-        bottom: 24px;
+        left: 35px;
+        bottom: 35px;
     }
 }
